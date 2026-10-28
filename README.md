@@ -90,13 +90,13 @@ React Native applications focused on performance, responsive layouts, and smooth
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Farzeensiddiquie&show_icons=true&theme=tokyonight" />
+<img src="https://github-readme-stats.vercel.app/api?username=farzeenwasif&show_icons=true&theme=tokyonight" />
 
 </p>
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Farzeensiddiquie&layout=compact&theme=tokyonight" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=farzeenwasif&layout=compact&theme=tokyonight" />
 
 </p>
 
@@ -106,7 +106,7 @@ React Native applications focused on performance, responsive layouts, and smooth
 
 <p align="center">
 
-<img src="https://streak-stats.demolab.com/?user=Farzeensiddiquie&theme=tokyonight" />
+<img src="https://streak-stats.demolab.com/?user=farzeenwasif&theme=tokyonight" />
 
 </p>
 
