@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/banner.svg" width="100%" alt="Farzeen Wasif Banner"/>
+  <img src="/banner.jpg" width="100%" alt="Farzeen Wasif Banner"/>
 </p>
 <h1 align="center">Hi 👋 I'm Farzeen Wasif !</h1>
 
