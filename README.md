@@ -23,22 +23,12 @@
 
 <img align="right" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="320" alt="coding"/>
 
-```typescript
-const farzeen = {
-  role:      "Full Stack Web & Mobile Developer",
-  frontend:  ["React", "Next.js", "TypeScript", "Tailwind"],
-  mobile:    ["React Native", "Expo"],
-  backend:   ["Node.js", "Express", "MongoDB", "Firebase"],
-  motion:    ["Framer Motion", "GSAP", "Three.js"],
-  focus:     "clean architecture · performance · polished UI/UX",
-  currently: "shipping animated, scalable products 🚀",
-};
-```
+Full Stack developer focused on building modern web and mobile applications with clean architecture, performance optimization, and polished UI/UX. Experienced in developing responsive interfaces, animated interactions, and scalable backend APIs.
 
-- 🔭 Building modern web and mobile applications with clean architecture and performance in mind
-- 🎨 Passionate about animated interactions, micro-motion, and 3D on the web
-- 📱 React Native (Expo) apps focused on smooth, responsive layouts
-- 🌱 Always exploring the React ecosystem and modern frontend animation techniques
+- 🔭 **Web:** React, Next.js and TypeScript, backed by Node, Express, MongoDB and Firebase
+- 📱 **Mobile:** React Native (Expo) apps focused on smooth, responsive layouts
+- 🎨 **Motion:** Framer Motion, GSAP and Three.js for animated interactions and 3D on the web
+- 🌱 **Now:** exploring the React ecosystem and modern frontend animation techniques
 
 <br clear="right"/>
 
