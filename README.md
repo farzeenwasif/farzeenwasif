@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b27,40:3d59a1,70:7aa2f7,100:bb9af7&height=220&section=header&text=Farzeen%20Wasif&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Full%20Stack%20Web%20%26%20Mobile%20App%20Developer&descAlignY=58&descSize=20" width="100%" alt="Farzeen Wasif header"/>
+  <img src="/banner.jpg" width="100%" alt="Farzeen Wasif Banner"/>
 </p>
 
 <p align="center">
@@ -14,10 +14,6 @@
   <a href="https://farzeensportfolio.vercel.app"><img src="https://img.shields.io/badge/Portfolio-Visit-7AA2F7?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/></a>
   <a href="mailto:farzeenwasif15@gmail.com"><img src="https://img.shields.io/badge/Email-Say%20Hi-BB9AF7?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
   <img src="https://komarev.com/ghpvc/?username=farzeenwasif&style=for-the-badge&color=7aa2f7&label=PROFILE+VIEWS" alt="Profile views"/>
-</p>
-
-<p align="center">
-  <img src="/banner.jpg" width="100%" alt="Farzeen Wasif Banner"/>
 </p>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="divider"/>
@@ -138,6 +134,8 @@ const farzeen = {
 </p>
 
 <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="divider"/>
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:bb9af7,50:7aa2f7,100:1a1b27&height=140&section=footer&animation=twinkling" width="100%" alt="footer"/>
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=500&size=16&duration=3500&pause=1200&color=BB9AF7&center=true&vCenter=true&width=500&height=40&lines=Thanks+for+stopping+by+%E2%9C%A8;Let's+build+something+great+together" alt="Thanks for visiting"/>
 </p>
