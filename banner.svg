@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Farzeen Wasif — Full Stack Web and Mobile App Developer" xmlns:c2pa="http://c2pa.org/manifest">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1020"/>
+      <stop offset="1" stop-color="#161b33"/>
+    </linearGradient>
+    <linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c0caf5"/>
+      <stop offset="0.55" stop-color="#7aa2f7"/>
+      <stop offset="1" stop-color="#bb9af7"/>
+    </linearGradient>
+    <radialGradient id="auroraA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7aa2f7" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#7aa2f7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="auroraB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#bb9af7" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#bb9af7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="auroraC" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff9e64" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ff9e64" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gridFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="gridMask">
+      <rect width="1200" height="360" fill="url(#gridFade)"/>
+    </mask>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .name, .sub, .tag { font-family: "Segoe UI", -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      .name { font-size: 78px; font-weight: 800; letter-spacing: -1.5px; }
+      .sub  { font-size: 22px; font-weight: 500; fill: #a9b1d6; }
+      .tag  { font-size: 13px; font-weight: 600; fill: #7aa2f7; }
+
+      /* name draws its outline, then fills */
+      .stroke { fill: none; stroke: url(#nameGrad); stroke-width: 1.4;
+                stroke-dasharray: 1400; stroke-dashoffset: 1400;
+                animation: draw 2.2s cubic-bezier(.65,0,.35,1) forwards; }
+      .fill   { fill: url(#nameGrad); opacity: 0;
+                animation: fillIn 1s ease-out 1.6s forwards; }
+      @keyframes draw   { to { stroke-dashoffset: 0; } }
+      @keyframes fillIn { to { opacity: 1; } }
+
+      .rise { opacity: 0; transform: translateY(14px);
+              animation: rise .9s cubic-bezier(.2,.8,.2,1) forwards; }
+      .d1 { animation-delay: 2.2s; } .d2 { animation-delay: 2.5s; }
+      .d3 { animation-delay: 2.7s; } .d4 { animation-delay: 2.9s; } .d5 { animation-delay: 3.1s; }
+      @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+
+      /* ambient aurora drift (loops) */
+      .aA { animation: driftA 14s ease-in-out infinite alternate; }
+      .aB { animation: driftB 18s ease-in-out infinite alternate; }
+      .aC { animation: driftC 22s ease-in-out infinite alternate; }
+      @keyframes driftA { from { transform: translate(0,0) scale(1); }   to { transform: translate(120px,30px) scale(1.15); } }
+      @keyframes driftB { from { transform: translate(0,0) scale(1.1); } to { transform: translate(-90px,-20px) scale(0.95); } }
+      @keyframes driftC { from { transform: translate(0,0); }            to { transform: translate(60px,-40px); } }
+
+      /* orbit on the right */
+      .orbit { transform-origin: 1010px 180px; animation: spin 16s linear infinite; }
+      .orbit2 { transform-origin: 1010px 180px; animation: spin 24s linear infinite reverse; }
+      .orbit3 { transform-origin: 1010px 180px; animation: spin 32s linear infinite; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .core { animation: pulse 3s ease-in-out infinite; transform-origin: 1010px 180px; }
+      @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+
+      .cursor { animation: blink 1s steps(2,start) infinite; }
+      @keyframes blink { to { visibility: hidden; } }
+
+      @media (prefers-reduced-motion: reduce) {
+        .stroke { animation: none; stroke-dashoffset: 0; }
+        .fill, .rise { animation: none; opacity: 1; transform: none; }
+        .aA, .aB, .aC, .orbit, .orbit2, .orbit3, .core, .cursor { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="360" rx="18" fill="url(#bg)"/>
+
+  <!-- aurora -->
+  <g filter="url(#blur)">
+    <ellipse class="aA" cx="260" cy="120" rx="260" ry="120" fill="url(#auroraA)"/>
+    <ellipse class="aB" cx="760" cy="300" rx="320" ry="130" fill="url(#auroraB)"/>
+    <ellipse class="aC" cx="1050" cy="60"  rx="180" ry="110" fill="url(#auroraC)"/>
+  </g>
+
+  <!-- perspective grid (bottom), fades upward -->
+  <g mask="url(#gridMask)" stroke="#7aa2f7" stroke-opacity="0.16" stroke-width="1">
+    <line x1="600" y1="200" x2="-200" y2="360"/>
+    <line x1="600" y1="200" x2="60"   y2="360"/>
+    <line x1="600" y1="200" x2="320"  y2="360"/>
+    <line x1="600" y1="200" x2="600"  y2="360"/>
+    <line x1="600" y1="200" x2="880"  y2="360"/>
+    <line x1="600" y1="200" x2="1140" y2="360"/>
+    <line x1="600" y1="200" x2="1400" y2="360"/>
+    <line x1="0" y1="236" x2="1200" y2="236"/>
+    <line x1="0" y1="262" x2="1200" y2="262"/>
+    <line x1="0" y1="296" x2="1200" y2="296"/>
+    <line x1="0" y1="338" x2="1200" y2="338"/>
+  </g>
+
+  <!-- rounded frame to keep the card feel -->
+  <rect x="0.5" y="0.5" width="1199" height="359" rx="18" fill="none" stroke="#7aa2f7" stroke-opacity="0.25"/>
+
+  <!-- orbit system -->
+  <g class="orbit"  fill="none" stroke="#7aa2f7" stroke-opacity="0.75" stroke-width="1.6">
+    <ellipse cx="1010" cy="180" rx="118" ry="44"/>
+    <circle cx="1128" cy="180" r="5" fill="#7aa2f7" stroke="none" filter="url(#glow)"/>
+  </g>
+  <g class="orbit2" fill="none" stroke="#bb9af7" stroke-opacity="0.75" stroke-width="1.6">
+    <ellipse cx="1010" cy="180" rx="118" ry="44" transform="rotate(60 1010 180)"/>
+    <circle cx="1010" cy="136" r="5" fill="#bb9af7" stroke="none" filter="url(#glow)" transform="rotate(60 1010 180)"/>
+  </g>
+  <g class="orbit3" fill="none" stroke="#ff9e64" stroke-opacity="0.7" stroke-width="1.6">
+    <ellipse cx="1010" cy="180" rx="118" ry="44" transform="rotate(-60 1010 180)"/>
+    <circle cx="892" cy="180" r="5" fill="#ff9e64" stroke="none" filter="url(#glow)" transform="rotate(-60 1010 180)"/>
+  </g>
+  <circle class="core" cx="1010" cy="180" r="12" fill="#c0caf5" filter="url(#glow)"/>
+
+  <!-- text -->
+  <g transform="translate(72 0)">
+    <text class="name stroke" x="0" y="168">Farzeen Wasif</text>
+    <text class="name fill"   x="0" y="168">Farzeen Wasif</text>
+
+    <text class="sub rise d1" x="2" y="212">Full Stack Web &amp; Mobile App Developer</text>
+
+    <g transform="translate(2 248)"><g class="rise d2">
+      <rect width="72" height="26" rx="13" fill="#7aa2f7" fill-opacity="0.12" stroke="#7aa2f7" stroke-opacity="0.5"/>
+      <text class="tag" x="36" y="17" text-anchor="middle">React</text>
+    </g></g>
+    <g transform="translate(84 248)"><g class="rise d3">
+      <rect width="84" height="26" rx="13" fill="#7aa2f7" fill-opacity="0.12" stroke="#7aa2f7" stroke-opacity="0.5"/>
+      <text class="tag" x="42" y="17" text-anchor="middle">Next.js</text>
+    </g></g>
+    <g transform="translate(178 248)"><g class="rise d4">
+      <rect width="122" height="26" rx="13" fill="#7aa2f7" fill-opacity="0.12" stroke="#7aa2f7" stroke-opacity="0.5"/>
+      <text class="tag" x="61" y="17" text-anchor="middle">React Native</text>
+    </g></g>
+    <g transform="translate(310 248)"><g class="rise d5">
+      <rect width="80" height="26" rx="13" fill="#7aa2f7" fill-opacity="0.12" stroke="#7aa2f7" stroke-opacity="0.5"/>
+      <text class="tag" x="40" y="17" text-anchor="middle">Node.js</text>
+    </g></g>
+
+    <text class="sub rise d5" x="2" y="312" style="font-size:15px; fill:#565f89;">github.com/farzeenwasif<tspan class="cursor" fill="#7aa2f7">_</tspan></text>
+  </g>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpkNWI3NTBlZi03ZTIyLTRmMTItYjgyYS1lNzM0OTM2ODMyYTgAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaG9xqAo4tvDWp5NM7i/mmRsAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDphZjM2NGUzNS03ODZjLTQ1NjEtYmU0Yi02MTAyODcxZmFlYjRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoTmQhGUAfXBbz3gQs0XO8kgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggGAyiT3s0jMPBs6OwliYNj68Umx3+jipBW+Scn18dsR2kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaOkqTnhdHYa7LIo3VXRDhAEAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIBuQkDJYrtdp/cljcKT2kGpdFJkSqb4sFqc79bBCchHHZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GSCPZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmQ1Yjc1MGVmLTdlMjItNGYxMi1iODJhLWU3MzQ5MzY4MzJhOC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjZjZjQ2YzkzLTQyNTItNDBkNi1hNDhjLTVlZjA2NjE1NzQ4MHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAYDKJPezSMw8Gzo7CWJg2PrxSbHf6OKkFb5JyfXx2xHaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggSRHsK6CfK2wlizELuIyJIz1d9JviiUrMVJTwGUa1tEOiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggYMDiFLZqXTTYvrOlyzgcpGiNzL4o8w/sY5se7WBDION0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQIPQlsBNwo4RX4Ne4disU3+4vTGSHFrlWFUAdGYUqsCZBX76vPv4oonFFvJmM/nBNSGBC3VsqqmNksUKLhIrObc=</c2pa:manifest></metadata></svg>
